@@ -1,0 +1,30 @@
+/**
+ * css for videojs-remnant
+ * With the default plugins for postcss you can
+ * - @import files, they will be inlined during build
+ * - not worry about browser prefixes, they will be handled
+ * - nest selectors. This follows the css specification that is
+ *   currently out on some browsers. See https://tabatkins.github.io/specs/css-nesting/
+ * - custom properties (aka variables) via the var(--var-name) syntax. See
+ *   https://www.w3.org/TR/css-variables-1/
+ */
+
+.video-js {
+
+  &.vjs-remnant {
+    /* This class is added to the video.js element by the plugin by default. */
+    display: block;
+
+    & .vjs-remnant-content {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+
+      & .vjs-remnant-canvas {
+        position: absolute;
+      }
+    }
+  }
+}
