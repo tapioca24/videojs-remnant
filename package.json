@@ -47,6 +47,12 @@
   ],
   "author": "tapioca24",
   "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tapioca24/videojs-remnant.git"
+  },
+  "homepage": "https://github.com/tapioca24/videojs-remnant",
+  "types": "./index.d.ts",
   "vjsstandard": {
     "ignore": [
       "dist",
