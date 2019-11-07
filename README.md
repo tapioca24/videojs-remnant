@@ -1,6 +1,7 @@
 # videojs-remnant
 
-A video.js plugin to leave the last frame video at the end of playback.
+A video.js plugin to leave the last frame video at the end of playback.  
+This is useful when playing a video that has been split into multiple files.
 
 ## Table of Contents
 
@@ -12,6 +13,7 @@ A video.js plugin to leave the last frame video at the end of playback.
 - [Usage](#usage)
   - [`<script>` Tag](#script-tag)
   - [Browserify/CommonJS](#browserifycommonjs)
+  - [Browserify/ES6](#browserifyes6)
   - [RequireJS/AMD](#requirejsamd)
 - [License](#license)
 
@@ -53,6 +55,23 @@ var videojs = require('video.js');
 require('videojs-remnant');
 
 var player = videojs('my-video');
+
+player.remnant();
+```
+
+### Browserify/ES6
+
+When using with Browserify, install videojs-logo via npm and `import` the plugin as you would any other module.
+
+```js
+import videojs from 'video.js';
+
+// The actual plugin function is exported by this module, but it is also
+// attached to the `Player.prototype`; so, there is no need to assign it
+// to a variable.
+import 'videojs-remnant';
+
+const player = videojs('my-video');
 
 player.remnant();
 ```
