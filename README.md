@@ -15,6 +15,7 @@ This is useful when playing a video that has been split into multiple files.
   - [Browserify/CommonJS](#browserifycommonjs)
   - [Browserify/ES6](#browserifyes6)
   - [RequireJS/AMD](#requirejsamd)
+- [Configuration](#configuration)
 - [License](#license)
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
@@ -87,6 +88,12 @@ require(['video.js', 'videojs-remnant'], function(videojs) {
   player.remnant();
 });
 ```
+
+## Configuration
+
+| Property               | Attributes | Type    | Default value | Description                      |
+| ---------------------- | ---------- | ------- | ------------- | -------------------------------- |
+| disableColorCorrection | Optional   | Boolean | false         | Disable canvas color correction. |
 
 ## License
 
