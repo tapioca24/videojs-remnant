@@ -15,10 +15,12 @@ This is useful when playing a video that has been split into multiple files.
   - [Browserify/CommonJS](#browserifycommonjs)
   - [Browserify/ES6](#browserifyes6)
   - [RequireJS/AMD](#requirejsamd)
+  - [TypeScript](#typescript)
 - [Configuration](#configuration)
 - [License](#license)
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
+
 ## Installation
 
 ```sh
@@ -37,7 +39,7 @@ This is the simplest case. Get the script in whatever way you prefer and include
 <script src="//path/to/video.min.js"></script>
 <script src="//path/to/videojs-remnant.min.js"></script>
 <script>
-  var player = videojs('my-video');
+  var player = videojs("my-video");
 
   player.remnant();
 </script>
@@ -48,31 +50,31 @@ This is the simplest case. Get the script in whatever way you prefer and include
 When using with Browserify, install videojs-remnant via npm and `require` the plugin as you would any other module.
 
 ```js
-var videojs = require('video.js');
+var videojs = require("video.js");
 
 // The actual plugin function is exported by this module, but it is also
 // attached to the `Player.prototype`; so, there is no need to assign it
 // to a variable.
-require('videojs-remnant');
+require("videojs-remnant");
 
-var player = videojs('my-video');
+var player = videojs("my-video");
 
 player.remnant();
 ```
 
 ### Browserify/ES6
 
-When using with Browserify, install videojs-logo via npm and `import` the plugin as you would any other module.
+When using with Browserify, install videojs-remnant via npm and `import` the plugin as you would any other module.
 
 ```js
-import videojs from 'video.js';
+import videojs from "video.js";
 
 // The actual plugin function is exported by this module, but it is also
 // attached to the `Player.prototype`; so, there is no need to assign it
 // to a variable.
-import 'videojs-remnant';
+import "videojs-remnant";
 
-const player = videojs('my-video');
+const player = videojs("my-video");
 
 player.remnant();
 ```
@@ -82,11 +84,28 @@ player.remnant();
 When using with RequireJS (or another AMD library), get the script in whatever way you prefer and `require` the plugin as you normally would:
 
 ```js
-require(['video.js', 'videojs-remnant'], function(videojs) {
-  var player = videojs('my-video');
+require(["video.js", "videojs-remnant"], function(videojs) {
+  var player = videojs("my-video");
 
   player.remnant();
 });
+```
+
+### TypeScript
+
+When using with TypeScript, install videojs-remnant via npm and `import` the plugin as you would any other module.  
+You can use the `VideoJsRemnant` namespace.
+
+```ts
+import videojs, { VideoJsRemnant } from "video.js";
+import "videojs-remnant";
+
+const player = videojs("my-video");
+
+const options: VideoJsRemnant.Options = {
+  disableColorCorrection: true
+};
+player.remnant(options);
 ```
 
 ## Configuration
@@ -98,6 +117,5 @@ require(['video.js', 'videojs-remnant'], function(videojs) {
 ## License
 
 MIT. Copyright (c) tapioca24
-
 
 [videojs]: http://videojs.com/
