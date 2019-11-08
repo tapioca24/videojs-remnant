@@ -67,6 +67,7 @@
     "index.html",
     "scripts/",
     "src/",
+    "index.d.ts",
     "test/"
   ],
   "husky": {
