@@ -37,9 +37,7 @@ class Remnant extends Plugin {
     this._setup();
 
     this.player.on('playerresize', e => {
-      const rect = e.target.getBoundingClientRect();
-
-      this._setCanvasStyle(rect.width, rect.height);
+      this._setCanvasStyle(e.target.offsetWidth, e.target.offsetHeight);
     });
     this.player.on('loadeddata', () => {
       this._hide();
@@ -73,9 +71,7 @@ class Remnant extends Plugin {
     canvas.width = 1280;
     canvas.height = 720;
     this.canvas = canvas;
-    const rect = parent.getBoundingClientRect();
-
-    this._setCanvasStyle(rect.width, rect.height);
+    this._setCanvasStyle(parent.offsetWidth, parent.offsetHeight);
 
     div.appendChild(canvas);
 
