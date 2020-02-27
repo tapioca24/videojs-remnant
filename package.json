@@ -1,6 +1,6 @@
 {
   "name": "videojs-remnant",
-  "version": "1.0.3",
+  "version": "2.0.0",
   "description": "A video.js plugin to leave the last frame video at the end of playback.",
   "main": "dist/videojs-remnant.cjs.js",
   "module": "dist/videojs-remnant.es.js",

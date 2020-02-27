@@ -1,3 +1,6 @@
+<a name="2.0.0"></a>
+# [2.0.0](https://github.com/tapioca24/videojs-remnant/compare/v1.0.3...v2.0.0) (2020-02-27)
+
 <a name="1.0.3"></a>
 ## [1.0.3](https://github.com/tapioca24/videojs-remnant/compare/v1.0.2...v1.0.3) (2019-11-08)
 
